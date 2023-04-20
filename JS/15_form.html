@@ -181,6 +181,27 @@
     </script>
 
 
+
+
+
+    <form id="frm" action="https://search.naver.com/search.naver" method="get">
+        <input type="text" name="query" id="query">
+        <input type="button" value="네이버검색" id="btn">
+    </form>
+
+
+
+    <script>
+        
+        document.getElementById('btn').onclick = function(event){
+        alert('검색어는 ' + document.getElementById('query').value + '입니다.');
+        document.getElementById('frm').submit();
+        };
+
+    </script>
+
+
+
     
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">전송</button>
+    <script>
+        // 고전 이벤트
+        document.getElementById('btn').onclick = function(){
+            alert('전송합니다.');
+        }
+    </script>
+    
+    <script>
+        // 표준 이벤트
+        document.getElementById('btn').addEventListener('click', function(){
+            alert('전송합니다.');
+        })
+    </script>
+
+    <button id="btn" onclick="fnAlert()">전송</button>
+    <script>
+        // 인라인 이벤트
+        function fnAlert(){
+            alert('전송합니다.');
+        }
+    </script>
+
+    <button id="to_site">이동</button>
+    <script>
+        document.getElementById('to_site').onclick = function(){
+            location.href = 'https://www.google.com';
+        }
+    </script>
+
+
+
+
+        <form id="frm" action="https://search.naver.com/search.naver" method="get">
+            <input type="text" name="query" id="query">
+            <input type="button" value="네이버검색" id="btn">
+        </form>
+
+
+
+        <script>
+            
+            document.getElementById('btn').onclick = function(event){
+            alert('검색어는 ' + document.getElementById('query').value + '입니다.');
+            document.getElementById('frm').submit();
+            };
+
+        </script>
+
+        <form id="frm" action="https://search.naver.com/search.naver" method="get">
+            <input type="text" name="query" id="query" />
+            <input type="button" value="네이버검색" id="btn" />
+        </form>
+        
+        <script>
+            document.getElementById("btn").onclick = function (event) {
+            alert("검색어는" + document.getElementById("query").value + "입니다.");
+            document.getElementById("frm").submit();
+            };
+        </script>
+
+
+
+    
+</body>
+</html>
